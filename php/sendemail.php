@@ -1,17 +1,36 @@
 <?php
-	$name = stripcslashes($_POST['name']);
-	$emailAddr = stripcslashes($_POST['email']);
-	$comment = stripcslashes($_POST['message']);
 
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+function IsInjected($str)
 
-	$contactMessage =
-	"<div>
-	<p><strong>Name:</strong> $name <br />
-	<strong>E-mail:</strong> $emailAddr <br />
+{
+    $injections = array('(\n+)',
+           '(\r+)',
+           '(\t+)',
+           '(%0A+)',
+           '(%0D+)',
+           '(%08+)',
+           '(%09+)'
+           );
+             
+    $inject = join('|', $injections);
 
-	<p><strong>Message:</strong> $comment </p>
+    $inject = "/$inject/i";
+ 
+    if(preg_match($inject,$str))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+}
+if(IsInjected($visitor_email))
+{
+    echo "Bad email value!";
+    exit;
+}
+?>
 
 	<p><strong>Sending IP:</strong> $_SERVER[REMOTE_ADDR]<br />
 	<strong>Sent via:</strong> $_SERVER[HTTP_HOST]</p>
