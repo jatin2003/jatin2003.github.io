@@ -1,0 +1,22 @@
+{
+  "name": "Chaitanya Giri",
+  "authors": [
+    "Chaitanya Giri"
+  ],
+  "description": "My Portfolio",
+  "main": "index.html",
+  "keywords": [
+    "Font",
+    "awesome",
+    "particle.js"
+  ],
+  "license": "MIT",
+  "homepage": "https://chaitanyagiri.github.io/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
