@@ -1,4 +1,3 @@
 # [Personal Website](https://jatin2003.github.io)
 
-## Credits:-
-[Brittany Chiang](https://github.com/bchiang7)
+## Thanks to [Brittany Chiang](https://github.com/bchiang7/bchiang7.github.io)
