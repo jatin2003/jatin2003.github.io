@@ -9,6 +9,13 @@
   font-weight: 300;
   font-style: normal;
 }
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+	background:linear-gradient(transparent ,#00c6ff 10%, #80ffbf 50%, #ffa31a 90%);
+}
 @font-face {
   font-family: Apercu;
   src: url(../fonts/apercu/Apercu-LightItalic.eot);
